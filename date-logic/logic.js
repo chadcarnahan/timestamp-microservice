@@ -24,7 +24,7 @@ const timeStamp = (date) => {
       "Nov",
       "Dec",
     ];
-    let days = ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"];
+    let days = ["Sun","Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"];
 
     let year = date.getFullYear();
     let month = months[date.getMonth()];
