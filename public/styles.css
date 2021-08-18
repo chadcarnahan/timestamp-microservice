@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+
+.underline {
+  border-bottom: 1px solid #aaa;
+  width: 90%;
+  margin: auto;
+}
+
+.usage,
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

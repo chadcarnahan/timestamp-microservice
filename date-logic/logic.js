@@ -1,8 +1,10 @@
 const typePreparer = (date) => {
   if (date.match(/^\d+$/)) {
-    return new Date(Number(date));
+    let newDate = new Date(Number(date));
+    return new Date(newDate.getTime() - newDate.getTimezoneOffset() * -60000);
   } else {
-    return new Date(date);
+    let newDate = new Date(date);
+    return new Date(newDate.getTime() - newDate.getTimezoneOffset() * -60000);
   }
 };
 
@@ -32,7 +34,7 @@ const timeStamp = (date) => {
     let min = String(date.getMinutes()).padStart(2, "0");
     let sec = String(date.getSeconds()).padStart(2, "0");
     let unix = date.getTime();
-    let utc = `${day}, ${dayMonth} ${month} ${year} ${hour}:${min}:${sec} CST`;
+    let utc = `${day}, ${dayMonth} ${month} ${year} ${hour}:${min}:${sec} GMT`;
     return { unix: unix, utc: utc };
   } else {
     return false;
