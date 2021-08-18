@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const router = require("./routes/date");
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 80;
 
 app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: false }));
